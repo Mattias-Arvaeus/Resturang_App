@@ -3,9 +3,46 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
-        <title>Blank App</title>
+        <link rel="stylesheet" type="text/css" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
+        <title>Torento Stenungsund | Bar och Mat</title>
     </head>
     <body>
-        <script type="text/javascript" src="cordova.js"></script>
+        <div id="content">
+            <!-- The Top Bar -->
+            <header class="top-bar">
+                <h3 class="top-bar-title"><a class="toHome" href="index.html"><span class="title-green">TO</span>REN<span class="title-red">TO</span></a></h3>
+            </header>
+
+            <div id="navBox">
+                <button class="navButton">
+                    <img alt="Three vertical parralel lines" src="">
+                </button>
+            </div>
+
+            <section id="presentation">
+                <!-- Checklist:
+                    [O] Bild på restaurangen
+                    [O] Inbjudnade text eller beskriving av resturangen
+                    [O] Address
+                    [O] Karta (google maps api)
+                    [O] Knapp för vägbeskrivning    -->
+            </section>
+
+            <section id="openHours">
+                <!-- Checklista:
+                    [O] Öppettiderna
+                    [O] + Status text för om det är öppet just nu (backend)-->
+            </section>
+
+            <section class="menu-box">
+                <!-- Checklista:
+                    [O] Alla meny kategorierna
+                    [O] Knapp (call to action) för att komma till Meny sidan-->
+            </section>
+
+        </div>
+        <!--Scripts DO NOT MOVE-->
+        <script type="text/javascript" src="bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+        <script src="script/script.js"></script>
     </body>
 </html>
