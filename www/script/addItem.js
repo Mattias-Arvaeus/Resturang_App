@@ -3,7 +3,7 @@ var targetElmt = parentElmt.querySelector('#menuItems');
 var cardList = [];
 
 function createCard (name, description, category, price, imgUrl) {
-    var category = category;
+    var cat = category;
     // The Card
     var card = document.createElement('article');
     card.setAttribute('class', 'card');
@@ -42,8 +42,5 @@ console.log(targetElmt);
 
     cardList.push(card);
 }
-createCard('Högrevsburgare', '150 gram högrevs burgare med inlagd gurka, tomater, sallad och lök i ett brioche bröd.', 'hamburger', 139, undefined);
-
-document.body.appendChild(cardList[0]);
 
 console.log(cardList); 
