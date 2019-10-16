@@ -1,5 +1,3 @@
-import {createCard} from "./addItem";
-
 var menuItems = [];
 
 class MenuItem {

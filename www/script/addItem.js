@@ -3,11 +3,9 @@ var targetElmt = parentElmt.querySelector('#menuItems');
 var cardList = [];
 
 function createCard (name, description, category, price, imgUrl) {
-    var cat = category;
     // The Card
     var card = document.createElement('article');
     card.setAttribute('class', 'card');
-console.log(targetElmt);
 
     // Image presentation
         var imgSect = document.createElement('section');
@@ -41,6 +39,32 @@ console.log(targetElmt);
     card.appendChild(orderAside);
 
     cardList.push(card);
+    targetElmt.appendChild(card);
+    
 }
+
+function searchCard (category) {
+    // function for displaying the correct card in a category
+    // 1. init a for-loop who iterate the array CardList
+    for (var i = 0; i < cardList.length; i++) {
+        // 2. see if category matches the cardlist[i].cat
+        if (cardList[i].data.categ == category) {
+            // 3. append the card from Cardlist to the html document
+            targetElmt.appendChild(cardList[i]);
+        }
+    }
+}
+
+function removeCards () {
+    var cards = document.querySelector ('.card');
+    cards.parentNode.removeChild(cards);
+}
+
+function buttonClick (category) {
+    removeCards();
+    searchCard(category);
+}
+
+createCard("Högrevs Hamburgare", "En hamburgare gjord på högrev", 'hamburger', 159, undefined);
 
 console.log(cardList); 
