@@ -25,12 +25,16 @@ function createCard (name, description, category, price, imgUrl) {
     // Order information
         var orderAside = document.createElement('aside');
         orderAside.setAttribute('class', 'cardAside')
+            var cat = document.createElement('p');
+            cat.setAttribute('class', 'cat');
+            cat.textContent = category;
             var orderPrice = document.createElement('p');
             orderPrice.setAttribute('class', 'cardPrice');
             orderPrice.textContent = price + " kr";
             var orderBtn = document.createElement('button');
             orderBtn.setAttribute('class', 'cardBtn', 'id', 'orderBtn', 'onclick', '');
             orderBtn.textContent = 'Order';
+        orderAside.appendChild(cat);
         orderAside.appendChild(orderPrice);
         orderAside.appendChild(orderBtn);
 
@@ -43,28 +47,30 @@ function createCard (name, description, category, price, imgUrl) {
     
 }
 
+function getCategory (targetCard) {
+    return targetCard.querySelector('.cardAside').querySelector('.cat').textContent;
+}
+
+function removeCards () {
+    while (targetElmt.firstChild) {
+        targetElmt.removeChild(targetElmt.firstChild);
+    }
+}
+
 function searchCard (category) {
+    removeCards();
     // function for displaying the correct card in a category
     // 1. init a for-loop who iterate the array CardList
     for (var i = 0; i < cardList.length; i++) {
         // 2. see if category matches the cardlist[i].cat
-        if (cardList[i].data.categ == category) {
+        if (getCategory(cardList[i]) === category) {
             // 3. append the card from Cardlist to the html document
             targetElmt.appendChild(cardList[i]);
         }
     }
 }
 
-function removeCards () {
-    var cards = document.querySelector ('.card');
-    cards.parentNode.removeChild(cards);
-}
-
-function buttonClick (category) {
-    removeCards();
-    searchCard(category);
-}
-
 createCard("Högrevs Hamburgare", "En hamburgare gjord på högrev", 'hamburger', 159, undefined);
+createCard("Pasta Alfredo", "En Pasta rätt", "pasta", 98, undefined);
 
 console.log(cardList); 
