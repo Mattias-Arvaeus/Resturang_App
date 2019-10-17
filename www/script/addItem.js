@@ -1,6 +1,11 @@
+
+// CardCreation Variables
 var parentElmt = document.getElementById('content');
 var targetElmt = parentElmt.querySelector('#menuItems');
 var cardList = [];
+
+// MenuItems variables
+var menuItems = [];
 
 function createCard (name, description, category, price, imgUrl) {
     // The Card
@@ -69,3 +74,25 @@ function searchCard (category) {
         }
     }
 }
+
+// Menuitems
+class MenuItem {
+    addToList = function () {
+        menuItems.push(this);
+    }
+    constructor (name, description, category, price, image) {
+        this.name = name;
+        this.desc = description;
+        this.cat  = category;
+        this.price= price;
+        this.image = image;
+
+        this.addToList();
+
+        createCard(name, description, category, price, image);
+    }
+}
+
+const vesuvio = new MenuItem('Vesuvio', 'Skinka, ost och tomatsås', 'pizza', 98, '../img/pizza.jpg');
+const hawaii = new MenuItem('Hawaii', 'Pizza med ost, skinka och annanas', 'pizza', 98, '../img/pizza.jpg');
+

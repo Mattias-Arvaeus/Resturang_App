@@ -1,4 +1,4 @@
-/*var menuItems = [];
+var menuItems = [];
 
 class MenuItem {
     addToList = function () {
@@ -13,6 +13,6 @@ class MenuItem {
 
         this.addToList();
 
-        // createCard(name, description, category, price, image);
+        createCard(name, description, category, price, image);
     }
-}*/
+}
