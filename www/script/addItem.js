@@ -69,8 +69,3 @@ function searchCard (category) {
         }
     }
 }
-
-createCard("Högrevs Hamburgare", "En hamburgare gjord på högrev", 'hamburger', 159, undefined);
-createCard("Pasta Alfredo", "En Pasta rätt", "pasta", 98, undefined);
-
-console.log(cardList); 
