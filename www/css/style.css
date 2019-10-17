@@ -1,0 +1,33 @@
+body {
+  background-color: #a33793; }
+
+#content {
+  width: 90%;
+  margin: 0 auto;
+  background-color: #16161d;
+  color: whitesmoke; }
+
+.top-bar {
+  background-color: black;
+  color: whitesmoke;
+  height: 5em; }
+  .top-bar .top-bar-title {
+    margin: 0 auto;
+    width: 1.6em; }
+  .top-bar .h-green {
+    color: #21af11; }
+  .top-bar .h-red {
+    color: #e21616; }
+  .top-bar a {
+    color: whitesmoke; }
+  .top-bar a:hover {
+    pointer-events: none; }
+
+#navBox {
+  margin: 5px; }
+  #navBox button {
+    padding: 5px; }
+
+#map {
+  height: 90%;
+  margin: 0 auto; }

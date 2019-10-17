@@ -1,11 +1,49 @@
-#heading {
-    height: 50px;
+$green: #21af11;
+$red: #e21616;
+$purple: #a33793;
+$eigengrau: #16161d;
+
+body {
+    background-color: $purple;
+}
+
+#content {
+    width: 90%;
+    margin: 0 auto;
+    background-color: $eigengrau;
+    color: whitesmoke;
+}
+
+.top-bar {
     background-color: black;
-    color: white;
+    color: whitesmoke;
+    height: 5em;
+    .top-bar-title {
+        margin: 0 auto;
+        width: 1.6em;
+    }
     .h-green {
-        color: green;
+        color: $green;
     }
     .h-red {
-        color: red;
+        color: $red;
     }
+    a {
+        color: whitesmoke;
+    }
+    a:hover {
+        pointer-events: none;
+    }
+}
+
+#navBox {
+    margin: 5px;
+    button {
+        padding: 5px;
+    }
+}
+
+#map {
+    height: 90%;
+    margin: 0 auto;
 }
