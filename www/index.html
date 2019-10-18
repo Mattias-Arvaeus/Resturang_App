@@ -5,6 +5,8 @@
         <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
         <link rel="stylesheet" type="text/css" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" />
+        <script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js"></script>
         <title>Torento Stenungsund | Bar och Mat</title>
     </head>
     <body>
@@ -22,19 +24,26 @@
             <article id="presentation">
                 <section class="present">
                     <img alt="Torento Pizzerias utsida" src="">
-                    <h1>Torento Stenungsund</h1>
+                    <h3>Torento Stenungsund</h3>
                     <p>Go mat, en trevlig miljö och bar, en plats med allt mitt i centrum av Stenungsund.
                         Vi erbjuder ett stort utbud av rätter från pizzor till À La Carte, dagens lunch m.m.
                         Lunch eller middag, ensam eller med sällskap, vi välkomnar dig till en trevlig atmosfär
                     </p>
                 </section>
+            </article>
+
+            <article id="infoCard">
+                <h1>Information</h1>
                 <section class="info">
+                    <div class="phone">
                     <h5>Telefon</h5>
                     <p>0303-77 78 70</p>
-                    <h5>Address</h5>
-                    <p>C W Borgs väg 2a</p>
-                    <div id="map"></div>
-                    <button>Vägbeskrivning</button>
+                    </div>
+                    <div class="address">
+                        <h5>Adress</h5>
+                        <p>C W Borgs väg 2a</p>
+                        <div id="map"></div>
+                    </div>
                 </section>
                 <!-- Checklist:
                     [O] Bild på restaurangen
@@ -44,15 +53,15 @@
                     [O] Knapp för vägbeskrivning    -->
                 </article>
 
-            <section id="openHours">
+            <article id="openHours">
                 <h1>ÖPPETTIDER</h1>
                 <p>Mån-Tor: 11-22</p>
                 <p>Fredag: 11-23</p>
                 <p>Lördag: 12-23</p>
                 <p>Söndag: 12-21</p>
-            </section>
+            </article>
 
-            <section class="menu-box">
+            <article class="menu-box">
                 <h1>MENY</h1>
                 <ul>
                     <li>Pizza</li>
@@ -66,20 +75,18 @@
                     <p>Vill du se hela menyn?</p>
                     <button><a href="meny.html">Till Menyn</a></button>
                 </div>
-            </section>
+            </article>
 
         </div>
         <!--Scripts DO NOT MOVE-->
         <script type="text/javascript" src="bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
-        <script async defer
-            src="http://maps.googleapis.com/maps/api/js?key=AIzaSyAdAjCexOHi_bm-lgecBjDv28HuE_8eJm8&callback=initMap">
-            var map;
-            function initMap() {
-                map = new google.maps.Map(document.querySelector('#content').querySelector('#presentation').querySelector('.info').querySelector('#map'), {
-                    center: {lat: 58.070720, lng: 11.821761},
-                    zoom: 8
-                });
-            }
+        <script>
+            var map = L.map('map').setView([58.070720, 11.821761], 17);
+
+            L.tileLayer('https://api.maptiler.com/maps/streets/{z}/{x}/{y}.png?key=wQQuiZoY9dLp2ttilNsS', {
+                attribution: '<a href="https://www.maptiler.com/copyright/" target="_blank">&copy; MapTiler</a> <a href="https://www.openstreetmap.org/copyright" target="_blank">&copy; OpenStreetMap contributors</a>'
+            }).addTo(map);
+            var marker = L.marker([58.070720, 11.821761]).addTo(map);
         </script>
     </body>
 </html>

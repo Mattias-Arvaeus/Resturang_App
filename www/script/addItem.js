@@ -95,4 +95,4 @@ class MenuItem {
 
 const vesuvio = new MenuItem('Vesuvio', 'Skinka, ost och tomatsås', 'pizza', 98, '../img/pizza.jpg');
 const hawaii = new MenuItem('Hawaii', 'Pizza med ost, skinka och annanas', 'pizza', 98, '../img/pizza.jpg');
-
+const hogrev = new MenuItem('Högrevsburgare', 'Högrev', 'hamburgare', 139, '../img/hamburger.jpg');

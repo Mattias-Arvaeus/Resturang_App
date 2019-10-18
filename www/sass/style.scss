@@ -4,13 +4,15 @@ $purple: #a33793;
 $eigengrau: #16161d;
 
 body {
-    background-color: $purple;
+    background-image: url("../img/background.png");
+    background-color: #ccc;
 }
 
 #content {
-    width: 90%;
+    width: 95%;
     margin: 0 auto;
-    background-color: $eigengrau;
+    padding: 0.1em;
+    position: static;
     color: whitesmoke;
 }
 
@@ -19,8 +21,8 @@ body {
     color: whitesmoke;
     height: 5em;
     .top-bar-title {
-        margin: 0 auto;
-        width: 1.6em;
+        text-align: center;
+        width: 1.5em;
     }
     .h-green {
         color: $green;
@@ -43,7 +45,33 @@ body {
     }
 }
 
+article {
+    position: relative;
+    margin: 0 1em;
+    padding: 1em;
+    padding-bottom: 10em;
+    background-color: $eigengrau;
+    border: 2px, solid, grey;
+    border-radius: 5px;
+    margin-bottom: 0.5em;
+}
+
+.present {
+    border-bottom: 2px, solid, whitesmoke;
+    width: 60%;
+}
+
+.phone {
+    width: max-content;
+}
+.address {
+    
+}
+
+
+
 #map {
-    height: 90%;
+    height: 15em;
+    width: 18em;
     margin: 0 auto;
 }
