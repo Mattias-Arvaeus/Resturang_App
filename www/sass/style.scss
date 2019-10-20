@@ -3,13 +3,29 @@ $red: #e21616;
 $purple: #a33793;
 $eigengrau: #16161d;
 
+$bordersPalet: 2px solid whitesmoke;
+
 body {
     background-image: url("../img/background.png");
     background-color: #ccc;
 }
 
+a:hover {
+    pointer-events: none;
+}
+
+ul {
+    list-style: none;
+    text-align: left;
+    font-size: 1.3em;
+}
+
+li {
+    padding: 0.3em;
+}
+
 #content {
-    width: 95%;
+    width: 97%;
     margin: 0 auto;
     padding: 0.1em;
     position: static;
@@ -19,10 +35,10 @@ body {
 .top-bar {
     background-color: black;
     color: whitesmoke;
-    height: 5em;
     .top-bar-title {
-        text-align: center;
-        width: 1.5em;
+        margin: 0 auto;
+        padding: 0.3em 0;
+        width: max-content;
     }
     .h-green {
         color: $green;
@@ -33,13 +49,10 @@ body {
     a {
         color: whitesmoke;
     }
-    a:hover {
-        pointer-events: none;
-    }
 }
 
 #navBox {
-    margin: 5px;
+    position: absolute;
     button {
         padding: 5px;
     }
@@ -49,26 +62,126 @@ article {
     position: relative;
     margin: 0 1em;
     padding: 1em;
-    padding-bottom: 10em;
+    text-align: center;
     background-color: $eigengrau;
-    border: 2px, solid, grey;
+    //border: 2px, solid, grey;
     border-radius: 5px;
     margin-bottom: 0.5em;
+
+    h1 {
+        text-decoration: underline;
+    }
+    p {
+        font-size: 1.4em;
+    }
 }
 
-.present {
-    border-bottom: 2px, solid, whitesmoke;
-    width: 60%;
+#banner {
+    background-image: url('../img/banner.jpg');
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 50vh;
+    margin-bottom: 0.2em;
+    border-radius: 5px;
 }
 
-.phone {
-    width: max-content;
-}
-.address {
-    
+#infoCard {
+    h3, h1 {
+        font-weight: 600;
+    }
+    .phone {
+        border-bottom: $bordersPalet;
+        margin-bottom: 1em;
+    }
 }
 
+.menuBox {
+    button {
+        width: 50vw;
+        height: 5vh;
+        color: whitesmoke;
+        background-color: whitesmoke;
+        border: 2px solid ;
+        border-radius: 40px;
+        color: black;
+        font-weight: 700;
+        font-size: 1.3em;
+    }
+    ul {
+        border-left: $bordersPalet;
+    }
+    li {
+        margin-left: -8vw;
+        padding: 0.5vh 0;
+    }
+}
 
+.menu-presentation {
+    padding: 2px;
+}
+
+#menuNavBar {
+    ul {
+        margin: 0 auto;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        li {
+            text-align: center;
+            font-weight: 650;
+            margin: 0 auto;
+            width: 100%;
+            border-bottom: $bordersPalet;
+        }
+    }
+    ul:first-child {
+        border-top: $bordersPalet;
+    }
+}
+
+#menuItems {
+    .card {
+        background-color: $eigengrau;
+        img {
+            width: 100%;
+        }
+        .cardDesc {
+            h4 {
+                font-size: 2em;
+                font-weight: 510;
+                border-bottom: $bordersPalet;
+                padding: 0.2em;
+            }
+            p {
+                text-align: left;
+                font-size: 1.2em;
+            }
+        }
+        .cardAside {
+            .cat {
+                display: none;
+            }
+            .cardPrice {
+                font-weight: 600;
+                font-size: 1.7em;
+            }
+            button {
+                background-color: whitesmoke;
+                color: $eigengrau;
+                border: $bordersPalet;
+                border-radius: 40px;
+
+                width: 50vw;
+                height: 5vh;
+
+                font-weight: 700;
+                font-size: 1.7em;
+                padding: 0px;
+                padding-bottom: 1.5em;
+            }
+        }
+    }
+}
 
 #map {
     height: 15em;

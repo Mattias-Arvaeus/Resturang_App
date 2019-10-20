@@ -10,48 +10,40 @@
         <title>Torento Stenungsund | Bar och Mat</title>
     </head>
     <body>
+        <!-- Side Menu -->    
+        <div id="navBox">
+            <button class="navButton">
+                <img alt="Three vertical parallel lines" src="img/menuIcon.png" width="30px">
+            </button>
+        </div>
+
             <!-- The Top Bar -->
             <header class="top-bar">
-                <h3 class="top-bar-title"><a class="toHome" href="index.html"><span class="h-green">TO</span>REN<span class="h-red">TO</span></a></h3>
-
-            <div id="navBox">
-                <button class="navButton">
-                    <img alt="Three vertical parallel lines" src="img/menuIcon.png" width="30px">
-                </button>
-            </div>
+                <a class="toHome" href="index.html">
+                    <h3 class="top-bar-title"><span class="h-green">TO</span>REN<span class="h-red">TO</span></h3>
+                </a>
             </header>
+
+        <section id="banner">
+            
+        </section>
+
         <div id="content">
-            <article id="presentation">
-                <section class="present">
-                    <img alt="Torento Pizzerias utsida" src="">
-                    <h3>Torento Stenungsund</h3>
-                    <p>Go mat, en trevlig miljö och bar, en plats med allt mitt i centrum av Stenungsund.
-                        Vi erbjuder ett stort utbud av rätter från pizzor till À La Carte, dagens lunch m.m.
-                        Lunch eller middag, ensam eller med sällskap, vi välkomnar dig till en trevlig atmosfär
-                    </p>
-                </section>
-            </article>
 
             <article id="infoCard">
                 <h1>Information</h1>
                 <section class="info">
                     <div class="phone">
-                    <h5>Telefon</h5>
-                    <p>0303-77 78 70</p>
+                        <h3>Telefon</h3>
+                        <p>0303-77 78 70</p>
                     </div>
                     <div class="address">
-                        <h5>Adress</h5>
+                        <h3>Adress</h3>
                         <p>C W Borgs väg 2a</p>
                         <div id="map"></div>
                     </div>
                 </section>
-                <!-- Checklist:
-                    [O] Bild på restaurangen
-                    [O] Inbjudnade text eller beskriving av resturangen
-                    [O] Address
-                    [O] Karta (google maps api)
-                    [O] Knapp för vägbeskrivning    -->
-                </article>
+            </article>
 
             <article id="openHours">
                 <h1>ÖPPETTIDER</h1>
@@ -61,7 +53,7 @@
                 <p>Söndag: 12-21</p>
             </article>
 
-            <article class="menu-box">
+            <article class="menuBox">
                 <h1>MENY</h1>
                 <ul>
                     <li>Pizza</li>
@@ -73,7 +65,7 @@
                 </ul>
                 <div class="CTA">
                     <p>Vill du se hela menyn?</p>
-                    <button><a href="meny.html">Till Menyn</a></button>
+                    <a href="meny.html"><button>Till Menyn</button></a>
                 </div>
             </article>
 

@@ -38,7 +38,7 @@ function createCard (name, description, category, price, imgUrl) {
             orderPrice.textContent = price + " kr";
             var orderBtn = document.createElement('button');
             orderBtn.setAttribute('class', 'cardBtn', 'id', 'orderBtn', 'onclick', '');
-            orderBtn.textContent = 'Order';
+            orderBtn.textContent = 'Beställ';
         orderAside.appendChild(cat);
         orderAside.appendChild(orderPrice);
         orderAside.appendChild(orderBtn);
@@ -95,4 +95,4 @@ class MenuItem {
 
 const vesuvio = new MenuItem('Vesuvio', 'Skinka, ost och tomatsås', 'pizza', 98, '../img/pizza.jpg');
 const hawaii = new MenuItem('Hawaii', 'Pizza med ost, skinka och annanas', 'pizza', 98, '../img/pizza.jpg');
-const hogrev = new MenuItem('Högrevsburgare', 'Högrev', 'hamburgare', 139, '../img/hamburger.jpg');
+

@@ -4,36 +4,38 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/style.css"
+    <link rel="stylesheet" href="css/style.css">
     <title>Torento Stenungsund | Meny</title>
 </head>
 <body>
-        <div id="content">
-        <!-- The Top Bar -->
-        <header class="top-bar">
-            <h3 class="top-bar-title"><a class="toHome" href="index.html"><span class="title-green">TO</span>REN<span class="title-red">TO</span></a></h3>
-        </header>
-        
+        <!-- Side Menu -->    
         <div id="navBox">
             <button class="navButton">
-                <img alt="Three vertical parralel lines" src="">
+                <img alt="Three vertical parallel lines" src="img/menuIcon.png" width="30px">
             </button>
         </div>
+    
+        <!-- The Top Bar -->
+        <header class="top-bar">
+            <a class="toHome" href="index.html">
+                <h3 class="top-bar-title"><span class="h-green">TO</span>REN<span class="h-red">TO</span></h3>
+            </a>
+        </header>
 
-        <section class="menu-presentation">
+        <div id="content">
+        <article class="menu-presentation">
             <h1>MENY</h1>
-        </section>
-
-        <nav id="menuNavBar">
-            <ul>
-                <li><button onclick="searchCard('pizza')">Pizza</button></li>
-                <li><button onclick="searchCard('hamburgare')">Hamburgare</button></li>
-                <li><button onclick="searchCard('a la carte')">À La Carte</button></li>
-                <li><button onclick="searchCard('sallad')">Sallad</button></li>
-                <li><button onclick="searchCard('pasta')">Pasta</button></li>
-                <li><button onclick="searchCard('barn')">Barn Meny</button></li>
-            </ul>
-        </nav>
+            <nav id="menuNavBar">
+                <ul>
+                    <li onclick="searchCard('pizza')">Pizza</li>
+                    <li onclick="searchCard('hamburgare')">Hamburgare</li>
+                    <li onclick="searchCard('a la carte')">À La Carte</li>
+                    <li onclick="searchCard('sallad')">Sallad</li>
+                    <li onclick="searchCard('pasta')">Pasta</li>
+                    <li onclick="searchCard('barn')">Barn Meny</li>
+                </ul>
+            </nav>
+        </article>
 
         <section id="menuItems">
             <!-- Checklist:
