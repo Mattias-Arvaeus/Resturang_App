@@ -98,7 +98,7 @@ article {
 .menuBox {
     button {
         width: 50vw;
-        height: 5vh;
+        height: 10vh;
         color: whitesmoke;
         background-color: whitesmoke;
         border: 2px solid ;
@@ -181,6 +181,10 @@ article {
             }
         }
     }
+}
+
+footer {
+    height: 50px;
 }
 
 #map {
